@@ -1,5 +1,5 @@
 // Get Audio Track
-var myAudio = new Audio('http://hestia.cdnstream.com:80/1569_128');
+var myAudio = new Audio('https://s2.radio.co/s506afb1b1/listen');
   
 // Init isPlaying Variable
 var isPlaying = false;
