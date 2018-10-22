@@ -43,59 +43,83 @@ body
     top: 50%;
     left: 50%;
 }    
+.header
+{
+    position: absolute;
+    bottom: 215px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     
+}  
 
+.left
+{
+    position: absolute;
+    bottom: 117px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     
+}  
+
+.right
+{
+    position: absolute;
+    bottom: 117px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     
+}  
 .display 
 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+     
 }    
 
 .play-button 
 {
+    
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}    
+
+img {
+    border: 1px solid #ddd;
     height: 100px;
-    width: 100px;
     border-radius: 50px;
-    background: #fe7633;
-    background: linear-gradient(0deg, #fe7633 0%, #fdc541 100%);
     text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     margin: 0 auto;
-}    
-
-.play-button i 
-{
-    text-align: center;
-    font-size: 60px;
-    line-height: 100px;
-    color: #FFF;
-    opacity: 0.8;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    width: 100px;
 }
     
-.play-button.pause .fa-pause    
+.play-button.pause .pause    
 {
     display: block;
 }
 
-.play-button.pause .fa-play 
+.play-button.pause .play 
 {
     display: none;
 }
 
-.play-button .fa-pause 
+.play-button .pause 
 {
     position: relative;
     display: none;
     left: 0;
 }
 
-.play-button .fa-play 
+.play-button .play 
 {
     position: relative;
-    left: 4px;
+    /* left: 4px; */
+    display: block;
 }
 
 /* Set black background color, white text and some padding */
