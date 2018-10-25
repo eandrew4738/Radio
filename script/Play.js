@@ -22,3 +22,7 @@ myAudio.onplaying = function() {
 myAudio.onpause = function() {
   isPlaying = false;
 };
+
+$('.social-toggle').on('click', function() {
+  $(this).next().toggleClass('open-menu');
+});
