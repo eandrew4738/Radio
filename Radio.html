@@ -24,130 +24,151 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="form.js"></script>
-    <link rel="stylesheet" href="form.css">
+    <script src="script/form.js"></script>
+
+    <link rel="stylesheet" href="script/form.css">
+
+    <script src="script/custom.css"></script>
+
     <style>
+ 
+        label {
+            padding-right: 322px;
+        }
 
-label {
-  	    padding-right: 322px;
+        #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
 
-}
+        .btn-success {
+        color: #fff;
+        background-color: rgb(69, 132, 250);
+        border-color: rgb(88, 144, 250);
+        }
 
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        .btn-success:hover {
+        color: #fff;
+        background-color: blue;
+        border-color: #1e7e34;
+        }
 
-.btn-success {
-    color: #fff;
-    background-color: rgb(69, 132, 250);
-    border-color: rgb(88, 144, 250);
-}
+        .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+        color: #fff;
+        background-color: blue;
+        border-color: #1c7430;
+        }
 
-.btn-success:hover {
-    color: #fff;
-    background-color: blue;
-    border-color: #1e7e34;
-}
+        #myImg:hover {opacity: 0.7;}
 
-.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
-    color: #fff;
-    background-color: blue;
-    border-color: #1c7430;
-}
+        /* The Modal (background) */
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 29px;/* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
 
-#myImg:hover {opacity: 0.7;}
+        /* Modal Content (image) */
+        .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        top: 0px;
+        }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 29px;/* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
+        /* Caption of Modal Image */
+        #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+        }
 
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    top: 0px;
-}
+        /* Add Animation */
+        .modal-content, #caption {    
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        }
 
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
 
-/* Add Animation */
-.modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
+        @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+        }
 
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
+        @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+        }
 
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
 
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #cbdef0;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        /* The Close Button */
+        .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #cbdef0;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .close:hover,
+        .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+        }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px ){
-    .modal-content {
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px ){
+        .modal-content {
         width: 100%;
-    }
-}
+        }
+        }
 
-</style>
+        /* Portrait and Landscape  for iphone*/
+        @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2) {
 
+        }
+
+        /* Laptops */
+        @media screen 
+        and (min-device-width: 1200px) 
+        and (max-device-width: 1600px) 
+        and (-webkit-min-device-pixel-ratio: 1) { 
+        }
+    </style>
 </head>
 
 <body>
 
     <!--Header -->
-    <nav class="navbar navbar-inverse" style="position: absolute; top: 0%; width: 100%;height: 5px;">
+    <nav class="navbar navbar-inverse" style="position: absolute; top: 0%; width: 100%;height: 90px;">
         <div class="header">
             <img src="Images/sot.fm.png" alt="title" style="width: 160px;height: 90px; ">
+        </div>
+        <div class="container-fluid">
+            <img src="Images/Top_Image.png" alt="topimage" style="width: 100%;height: 100%;">
         </div>
     </nav>
 
@@ -165,7 +186,14 @@ label {
             </div>
         </div>
     </div>
-    <div class="container-fluid text-center" style="position: absolute; bottom: 0%; width: 100%;height: 80px;">
+    
+    <nav class="navbar" style="position: absolute; bottom: 25%; width: 100%;height: 0px;">
+        <div class="container-fluid">
+            <img src="Images/Bottom_Image.png" alt="bottomimage" style="width: 100%;height: 100%;">
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center" style="position: absolute; bottom: 0%; width: 100%;height: 90px;">
         <img src="Images/if_Facebook_1851809.png" style="width:65px; height:65px;">
         <img src="Images/if_Instagram_1851807.png" style="width:65px; height:65px;">
         <img src="Images/if_Twitter_1851801.png" style="width:65px; height:65px;">
@@ -207,10 +235,9 @@ label {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
 
-    </div>
 
     <script>
         // Get the modal
