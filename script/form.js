@@ -1,19 +1,19 @@
 
 $(function()
 {
-    function after_form_submitted(data) 
+    function after_form_submitted(response) 
     {
-        if(data.result == 'success')
+        if(response == 'success')
         {
             $('form#reused_form').hide();
             $('#success_message').show();
             $('#error_message').hide();
         }
         else
-        {
+        {	
             $('#error_message').append('<ul></ul>');
 
-            jQuery.each(data.errors,function(key,val)
+            jQuery.each(response.errors,function(key,val)
             {
                 $('#error_message ul').append('<li>'+key+':'+val+'</li>');
             });
@@ -49,14 +49,12 @@ $(function()
             $btn.prop('orig_label',$btn.text());
             $btn.text('Sending ...');
         });
-        
-
-                    $.ajax({
+        	$.ajax({
                 type: "POST",
                 url: 'handler.php',
                 data: $form.serialize(),
-                success: after_form_submitted,
-                dataType: 'json' 
+                dataType: 'text',
+		success: after_form_submitted, 
             });        
         
       });	
