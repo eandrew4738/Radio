@@ -1,6 +1,6 @@
 <?php
-require '/vendor/phpmailer/class.phpmailer.php';
-require '/vendor/phpmailer/class.smtp.php';
+require '/script/vendor/phpmailer/class.phpmailer.php';
+require '/script/vendor/phpmailer/class.smtp.php';
  $mail = new PHPMailer;
    $mail->isSMTP();
    $mail->Host = 'smtp.gmail.com';
