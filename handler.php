@@ -1,6 +1,6 @@
 <?php
-require '/script/vendor/phpmailer/class.phpmailer.php';
-require '/script/vendor/phpmailer/class.smtp.php';
+require 'script/vendor/phpmailer/class.phpmailer.php';
+require 'script/vendor/phpmailer/class.smtp.php';
  $mail = new PHPMailer;
    $mail->isSMTP();
    $mail->Host = 'smtp.gmail.com';
@@ -11,7 +11,7 @@ require '/script/vendor/phpmailer/class.smtp.php';
    $mail->setFrom($_POST['email'], $_POST['name']);
    $mail->addAddress(' sot.fmradio@gmail.com', 'SOT.FM');
    if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-       $mail->Subject = 'PHPMailer contact form';
+       $mail->Subject = 'SOT.FM Contact Form';
        $mail->isHTML(false);
        $mail->Body = <<<EOT
 Email: {$_POST['email']}
