@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-        var player = {"id":"a97ca58","name":"Sound of Trumpets Radio","type":"classic","size":"large","stream":{"station ":"s506afb1b1","output":null,"streaming_url":"https:\/\/s2.radio.co\/s506afb1b1"},"theme":{"width":400,"background_colour":"#fcfcfc","text_colour":"#364349","accent_colour":"#7b919d","rounded_corners":true,"track_information":true},"settings":{"autoplay":false,"artwork":true,"spotify":false,"popout":false},"embed_url":"https:\/\/embed.radio.co\/player\/a97ca58.html","social":{"twitter":true,"facebook_share":true,"embed":false,"template":"\"SOT.FM\" Sound of Trumepts Radio"}};
+        var player = {"id":"a97ca58","name":"Sound of Trumpets Radio","type":"classic","size":"large","stream":{"station ":"s506afb1b1","output":null,"streaming_url":"https:\/\/s2.radio.co\/s506afb1b1"},"theme":{"width":300,"background_colour":"#fcfcfc","text_colour":"#364349","accent_colour":"#7b919d","rounded_corners":true,"track_information":true},"settings":{"autoplay":false,"artwork":true,"spotify":false,"popout":false},"embed_url":"https:\/\/embed.radio.co\/player\/a97ca58.html","social":{"twitter":true,"facebook_share":true,"embed":false,"template":"\"SOT.FM\" Sound of Trumepts Radio"}};
         var i = document.createElement('iframe');
 
     var style = "border: none;overflow:hidden;";
